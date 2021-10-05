@@ -1,52 +1,41 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
-  font-family: sans-serif;
+  font-family: "Lato";
   margin: 0;
 }
 
 .container {
-  max-width: 900px;
   margin: 20px auto;
+  max-width: 800px;
 }
 
-.team-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.books {
-  margin: 1rem;
-  padding: 1rem;
+.products {
+  margin: 20px;
+  padding: 20px;
   background: white;
-  border: 1px solid lightgrey;
-  border-radius: 1rem;
+  border: 1px solid black;
+  border-radius: 20px;
   min-width: 200px;
-  position: relative;
+}
+
+.noproducts {
+  margin-left: 23px;
 }
 
 .search {
-  margin-left: 1rem;
-  padding: 0.5rem;
+  margin-left: 23px;
+  padding: 10px;
 }
 
 .message {
   border: 1px solid grey;
   color: grey;
-  margin-top: 1rem;
-  padding: 1rem;
+  margin-top: 20px;
+  padding: 20px;
 }
 
 .message.error {
   border-color: red;
   color: red;
-}
-
-.message.success {
-  border-color: green;
-  color: green;
 }
 
 .loader {

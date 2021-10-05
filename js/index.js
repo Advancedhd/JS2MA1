@@ -1,25 +1,23 @@
-import { renderBooks } from "./ui/renderBooks.js";
-import { searchBooks } from "./ui/searchBooks.js";
-import { displayMessage } from "./ui/displayMessage.js";
+import { renderProducts } from "./components/renderProducts.js";
+import { searchProducts } from "./components/searchProducts.js";
+import { displayMessage } from "./components/displayMessage.js";
 
-const url = "https://noroff.herokuapp.com/v1/books";
+const url = "https://fakestoreapi.com/products";
 
-async function getBooks() {
+//fetching products from the url.
+async function getProducts() {
   try {
     const response = await fetch(url);
 
     const json = await response.json();
 
-    console.log(json);
+    const products = json;
 
-    const books = json;
-
-    renderBooks(books);
-    searchBooks(books);
+    renderProducts(products);
+    searchProducts(products);
   } catch (error) {
-    console.log(error);
-    displayMessage("error", error, ".books-container");
+    displayMessage("error", error, ".products-container");
   }
 }
 
-getBooks();
+getProducts();
